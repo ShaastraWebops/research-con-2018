@@ -1,0 +1,30 @@
+<div style="display: inline-block; vertical-align:top;" >
+<div class="page-heading">
+<h2> Upload or View Report </h2>
+</div>
+<br>
+<label>
+  Upload File
+</label>
+<br>
+
+<input class="btn btn-default" name="file" type="file" id="file" />
+
+<br>
+<button class="btn btn-primary" ng-click="report.upload()">Upload</button>
+
+<br><br>
+<div class="alert alert-danger" ng-show="report.error">
+  {{report.error}}
+</div>
+
+<div class="alert alert-success" ng-show="report.success">
+  {{report.success}}
+</div>
+</div>
+
+<div style="display: inline-block; padding-left: 20%;">
+
+<iframe ng-show="fileshow" ng-src="{{url}}" width="200%" align="center" height="800px"/>
+
+</div>

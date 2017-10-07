@@ -12,5 +12,7 @@ router.get('/me', auth.isAuthenticated(), controller.me);
 router.put('/:id/password', auth.isAuthenticated(), controller.changePassword);
 router.get('/:id', auth.isAuthenticated(), controller.show);
 router.post('/', controller.create);
+router.post('/uploadfile',auth.isAuthenticated(), controller.fileupload);
+router.get('/showfile/:name',auth.isAuthenticated(), controller.showfile);
 
 module.exports = router;

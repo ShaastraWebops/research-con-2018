@@ -22,12 +22,13 @@ import admin from './admin';
 import navbar from '../components/navbar/navbar.component';
 import footer from '../components/footer/footer.component';
 import main from './main/main.component';
+import ReportComponent from './report/report.component';
 import constants from './app.constants';
 import util from '../components/util/util.module';
 
 import './app.css';
 
-angular.module('researchConApp', [ngCookies, ngResource, ngSanitize, uiRouter, uiBootstrap, _Auth,
+angular.module('researchConApp', [ngCookies, ngResource, ReportComponent, ngSanitize, uiRouter, uiBootstrap, _Auth,
   account, admin, navbar, footer, main, constants, util
 ])
   .config(routeConfig)
