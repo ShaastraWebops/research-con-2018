@@ -1,5 +1,13 @@
+<style>
+  .navbar li{
+    padding-right: 0.5vw;
+    padding-left: 0.5vw;
+  }
+  
+</style>
+
 <div class="navbar navbar-default navbar-static-top">
-  <div style="width: 95vw; margin: auto;">
+  <div style="width: 95vw; margin: auto">
     <div class="navbar-header">
       <button class="navbar-toggle" type="button" ng-click="$ctrl.isCollapsed = !$ctrl.isCollapsed">
         <span class="sr-only">Toggle navigation</span>
@@ -17,16 +25,16 @@
           <a ui-sref="#about">ABOUT</a>
         </li>
         <li ui-sref-active="active">
+          <a ui-sref="#about">TOPICS</a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="#about">INDUSTRY CONNECT</a>
+        </li>
+        <li ui-sref-active="active">
           <a ui-sref="#about">SPEAKERS</a>
         </li>
         <li ui-sref-active="active">
           <a ui-sref="#about">COMMITTEE</a>
-        </li>
-        <li ui-sref-active="active">
-          <a ui-sref="#about">TOPICS</a>
-        </li>
-        <li ui-sref-active="active">
-          <a ui-sref="#about">SCHEDULE</a>
         </li>
         <li ui-sref-active="active">
           <a ui-sref="#about">DOWNLOADS</a>
