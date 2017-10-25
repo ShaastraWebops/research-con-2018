@@ -20,6 +20,9 @@ var UserSchema = new Schema({
     type: String,
     required: true
   },
+  file: {
+    type: String
+  },
   provider: String,
   salt: String
 });
