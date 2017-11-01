@@ -1,0 +1,128 @@
+.main-home{
+	font-family: 'Montserrat';
+}
+
+.main-section{
+	min-height: 100vh;
+	padding: 0 2vw;
+}
+
+.main-section1{
+	min-height: 50vh;
+}
+
+#home{
+	min-height: 100vh;
+}
+
+.main-section h1, h2{
+	font-family: 'Montserrat';
+}
+
+.main-section-heading{
+	font-weight: 300;
+	font-size: 48px;
+}
+
+.main-shaastra{
+	font-size: 64px;
+	font-weight: 400;
+	text-align: center;
+	margin-top: 5vh;
+}
+
+.main-presents{
+	font-weight: 300;
+	text-align: center;
+}
+
+.main-heading{
+	font-weight: 400;
+	letter-spacing: 1px;
+	text-align: center;
+	font-size: 48px;
+	line-height: 64px;
+}
+
+.main-date, .main-place{
+	width: 50vw;
+	margin: auto;
+	text-align: center;
+	padding: 1vh 0;
+}
+
+.main-date i, .main-place i{
+	text-align: right;
+	padding-right: 30px;
+}
+
+.main-theme{
+	font-weight: 300;
+	text-align: center;
+	font-size: 36px;
+}
+
+.main-register{
+	width: 20vw;
+	margin: auto;
+	text-align: center;
+	font-size: 24px;
+	color: white;
+	margin-top: 5vh;
+	border-radius: 1vh;
+  	box-shadow: 0 2px 8px 1px gainsboro;
+	background: #7b1fa2;
+	padding: 1vh 0;
+    background: -webkit-linear-gradient(-45deg, #ab47bc, #8e24aa);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(-45deg, #ab47bc, #8e24aa);
+    text-decoration: none;
+}
+
+.shaastra-logo, .iitm-logo{
+	height: 15vh;
+	position: absolute;
+	margin-top: -5vh;
+}
+
+.shaastra-logo{
+	left: 0px;
+	margin-left: -1vw;
+}
+
+.iitm-logo{
+	right: 0px;
+}
+
+.main-text{
+	font-size: 18px;
+	line-height: 22px;
+	font-weight: 300;
+	letter-spacing: 1px;
+}
+
+.main-patron p{
+	text-align: center;
+	margin-top: 3vh;
+	margin-bottom: 3vh;
+}
+
+.main-table{
+	width: 80%;
+}
+
+table, tr, td{
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+td{
+	width: 50%;
+	text-align: center;
+	padding: 1vh 0;
+}
+
+@media screen and (max-width: 1023px){
+	.shaastra-logo, .iitm-logo{
+		display: none;
+	}
+}

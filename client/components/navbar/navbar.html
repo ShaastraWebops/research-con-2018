@@ -1,13 +1,25 @@
 <style>
-  .navbar li{
-    padding-right: 0.5vw;
-    padding-left: 0.5vw;
+  .navbar .nav li a, .navbar .nav li a:hover{
+    padding-left: 0.75vw;
+    padding-right: 0.75vw;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Montserrat'
+  }
+
+  .navbar{
+    padding-right: 3vw;
+    height: 5vh;
+    background: #8e24aa;
+    background: -webkit-linear-gradient(-45deg, #ab47bc, #8e24aa);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(-45deg, #ab47bc, #8e24aa);
   }
   
 </style>
 
 <div class="navbar navbar-default navbar-static-top">
-  <div style="width: 95vw; margin: auto">
+  <div>
     <div class="navbar-header">
       <button class="navbar-toggle" type="button" ng-click="$ctrl.isCollapsed = !$ctrl.isCollapsed">
         <span class="sr-only">Toggle navigation</span>
@@ -22,38 +34,41 @@
           <a href="/"><span class="glyphicon glyphicon-home"></span></a>
         </li>
         <li ui-sref-active="active">
-          <a ui-sref="#about">ABOUT</a>
+          <a href="#main-about">ABOUT</a>
         </li>
         <li ui-sref-active="active">
-          <a ui-sref="#about">TOPICS</a>
+          <a href="#main-topics">TOPICS</a>
         </li>
         <li ui-sref-active="active">
-          <a ui-sref="#about">INDUSTRY CONNECT</a>
+          <a href="#main-iis">INDUSTRY CONNECT</a>
+        </li>
+        <!-- <li ui-sref-active="active">
+          <a href="#about">SPEAKERS</a>
+        </li> -->
+        <li ui-sref-active="active">
+          <a href="#main-committee">COMMITTEE</a>
         </li>
         <li ui-sref-active="active">
-          <a ui-sref="#about">SPEAKERS</a>
+          <a href="#main-timeline">TIMELINE</a>
         </li>
         <li ui-sref-active="active">
-          <a ui-sref="#about">COMMITTEE</a>
+          <a href="#main-downloads">DOWNLOADS</a>
         </li>
+        <!-- <li ui-sref-active="active">
+          <a href="#about">SPONSORS</a>
+        </li> -->
         <li ui-sref-active="active">
-          <a ui-sref="#about">DOWNLOADS</a>
+          <a href="#main-contact">CONTACT</a>
         </li>
-        <li ui-sref-active="active">
-          <a ui-sref="#about">SPONSORS</a>
-        </li>
-        <li ui-sref-active="active">
-          <a ui-sref="#about">CONTACT</a>
-        </li>
-        <li ng-show="$ctrl.isAdmin()" ui-sref-active="active"><a ui-sref="admin">Admin</a></li>
-        <li ng-show="$ctrl.isLoggedIn()" ui-sref-active="active"><a ui-sref="report">Report</a></li>
+        <li ng-show="$ctrl.isAdmin()" ui-sref-active="active"><a href="admin">Admin</a></li>
+        <li ng-show="$ctrl.isLoggedIn()" ui-sref-active="active"><a href="report">Report</a></li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li ng-hide="$ctrl.isLoggedIn()" ui-sref-active="active"><a ui-sref="report">SUBMIT</a></li>
+        <li ng-hide="$ctrl.isLoggedIn()" ui-sref-active="active"><a href="report">SUBMIT</a></li>
         <li ng-show="$ctrl.isLoggedIn()"><p class="navbar-text">Hello {{ $ctrl.getCurrentUser().name }}</p> </li>
-        <li ng-show="$ctrl.isLoggedIn()" ui-sref-active="active"><a ui-sref="settings"><span class="glyphicon glyphicon-cog"></span></a></li>
-        <li ng-show="$ctrl.isLoggedIn()"><a ui-sref="logout">LOGOUT</a></li>
+        <li ng-show="$ctrl.isLoggedIn()" ui-sref-active="active"><a href="settings"><span class="glyphicon glyphicon-cog"></span></a></li>
+        <li ng-show="$ctrl.isLoggedIn()"><a href="logout">LOGOUT</a></li>
       </ul>
     </div>
   </div>
