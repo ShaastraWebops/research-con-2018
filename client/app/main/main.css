@@ -5,7 +5,9 @@
 
 .main-section{
 	min-height: 100vh;
-	padding: 0 2vw;
+	padding-left: 2vw;
+	padding-right: 2vw;
+	padding-top: 5vh;
 }
 
 .main-section1{
