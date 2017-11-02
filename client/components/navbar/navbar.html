@@ -34,39 +34,39 @@
           <a href="/"><span class="glyphicon glyphicon-home"></span></a>
         </li>
         <li ui-sref-active="active">
-          <a href="#main-about">ABOUT</a>
+          <a href="/#main-about">ABOUT</a>
         </li>
         <li ui-sref-active="active">
-          <a href="#main-topics">TOPICS</a>
+          <a href="/#main-topics">TOPICS</a>
         </li>
         <li ui-sref-active="active">
-          <a href="#main-iis">INDUSTRY CONNECT</a>
+          <a href="/#main-iis">INDUSTRY CONNECT</a>
         </li>
         <!-- <li ui-sref-active="active">
           <a href="#about">SPEAKERS</a>
         </li> -->
         <li ui-sref-active="active">
-          <a href="#main-committee">COMMITTEE</a>
+          <a href="/#main-committee">COMMITTEE</a>
         </li>
         <li ui-sref-active="active">
-          <a href="#main-timeline">TIMELINE</a>
+          <a href="/#main-timeline">TIMELINE</a>
         </li>
         <li ui-sref-active="active">
-          <a href="#main-downloads">DOWNLOADS</a>
+          <a href="/#main-downloads">DOWNLOADS</a>
         </li>
         <!-- <li ui-sref-active="active">
           <a href="#about">SPONSORS</a>
         </li> -->
         <li ui-sref-active="active">
-          <a href="#main-contact">CONTACT</a>
+          <a href="/#main-contact">CONTACT</a>
         </li>
-        <li ng-show="$ctrl.isAdmin()" ui-sref-active="active"><a href="admin">Admin</a></li>
-        <li ng-show="$ctrl.isLoggedIn()" ui-sref-active="active"><a href="report">Report</a></li>
+        <li ng-show="$ctrl.isAdmin()" ui-sref-active="active"><a href="/admin">Admin</a></li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li ng-hide="$ctrl.isLoggedIn()" ui-sref-active="active"><a href="report">SUBMIT</a></li>
-        <li ng-show="$ctrl.isLoggedIn()"><p class="navbar-text">Hello {{ $ctrl.getCurrentUser().name }}</p> </li>
+        <li ng-show="!$ctrl.isLoggedIn()"><a href="/signup">SIGNUP</a></li>
+        <li ng-show="!$ctrl.isLoggedIn()"><a href="/login">LOGIN</a></li>
+        <li ng-show="$ctrl.isLoggedIn()" ui-sref-active="active"><a href="/report">SUBMISSION</a></li>
         <li ng-show="$ctrl.isLoggedIn()" ui-sref-active="active"><a href="settings"><span class="glyphicon glyphicon-cog"></span></a></li>
         <li ng-show="$ctrl.isLoggedIn()"><a href="logout">LOGOUT</a></li>
       </ul>

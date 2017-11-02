@@ -81,6 +81,13 @@
 .shaastra-logo, .iitm-logo{
 	height: 15vh;
 	position: absolute;
+	bottom: 0;
+}
+
+.src-logo{
+	height: 25vh;
+	position: absolute;
+	left: 0;
 	margin-top: -5vh;
 }
 
@@ -117,6 +124,12 @@ table, tr, td{
 
 td{
 	width: 50%;
+	text-align: center;
+	padding: 1vh 0;
+}
+
+.main-advisor{
+	width: 33%;
 	text-align: center;
 	padding: 1vh 0;
 }

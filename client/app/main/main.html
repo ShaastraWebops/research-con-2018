@@ -2,6 +2,7 @@
 	<section class="main-section" id="home">
 		<img src="../assets/images/logo.png" class="shaastra-logo">
 		<img src="../assets/images/iitm-logo.png" class="iitm-logo">
+		<img src="../assets/images/src-logo.png" class="src-logo">
 	    <h1 class="main-shaastra">SHAASTRA 2018</h1>
 	    <h2 class="main-presents">PRESENTS</h2>
 	    <h1 class="main-heading">1st SHAASTRA RESEARCH CONFERENCE</h1>
@@ -95,6 +96,43 @@
   			<p class="main-text">Prof. S. Sundar</p>
   			<p class="main-text">Associate Editor - IJAESAM, IIT Madras</p>
   		</div>
+  	</section>
+
+  	<section class="main-section">
+  		<h1 class="main-section-heading">Advisory Committee</h1>
+  		<table style="width: 100%;" class="main-text">
+  			<tr ng-repeat="advisor in mainCtrl.advisors">
+  				<td class="main-advisor">{{advisor.split(',')[0]}}</td>
+  				<td class="main-advisor">{{advisor.split(',')[1]}}</td>
+  				<td class="main-advisor">{{advisor.split(',')[2]}}</td>
+  			</tr>
+  		</table> 		
+  	</section>
+
+  	<section class="main-section">
+  		<h1 class="main-section-heading">Student Steering Committee</h1>
+  		<div>
+  			<p class="main-text">Badal Modi</p>
+  			<p class="main-text">Kirti Shankar Sharma</p>
+  			<p class="main-text">Sathish Swaminathan</p>
+  			<p class="main-text">Ashmon Maruthikkunel</p>
+  		</div>
+  		<h1 class="main-section-heading">SRC Student Team</h1>
+  		<div class="col-xs-12 col-md-6">
+  			<p class="main-text">Chirag Khalde</p>
+  			<p class="main-text">Kanti Kumari</p>
+  			<p class="main-text">M. Murugesh</p>
+  			<p class="main-text">Mrityunjay Singh</p>
+  			<p class="main-text">Prafulla Chandra</p>
+  		</div>
+  		<div class="col-xs-12 col-md-6">
+  			<p class="main-text">Prateek Paul</p>
+  			<p class="main-text">Shreeharsh Nair</p>
+  			<p class="main-text">Syed Azeem Uddin</p>
+  			<p class="main-text">T.V. Venkata Ramana</p>
+  			<p class="main-text">A. Gurubalan</p>
+  		</div>
+  		<p class="main-text">Shaastra’s Concept and Design team, Finance team, Media & Student Student Relations team, Operations and Infrastructure team, Sponsorship and PR team, Webops Team</p>
   	</section>
 
   	<section class="main-section" id="main-timeline">
