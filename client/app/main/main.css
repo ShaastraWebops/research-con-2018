@@ -1,5 +1,6 @@
 .main-home{
 	font-family: 'Montserrat';
+	margin-top: 70px;
 }
 
 .main-section{
@@ -133,6 +134,13 @@ td{
 	text-align: center;
 	padding: 1vh 0;
 }
+
+/* #navbar-main{
+	position: fixed;
+	background: #7b1fa2;
+    background: -webkit-linear-gradient(-45deg, #ab47bc, #8e24aa);
+    background: linear-gradient(-45deg, #ab47bc, #8e24aa);
+} */
 
 @media screen and (max-width: 1023px){
 	.shaastra-logo, .iitm-logo{
