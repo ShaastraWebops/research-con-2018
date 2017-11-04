@@ -8,6 +8,15 @@
     font-family: 'Montserrat'
   }
 
+  .navbar-nav{
+    margin: 0px 0px;
+  }
+
+  #navbar-collapse{
+    width: 100vw;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
   .navbar{
     padding-right: 3vw;
     height: 5vh;
@@ -19,13 +28,32 @@
     right:0;
     left:0;
   }
+
+  #mobile-title{
+    display: none;
+    color: white;
+  }
   
+  @media screen and (max-width: 719px){
+    .navbar .nav li a{
+    background: #8e24aa;
+    background: -webkit-linear-gradient(-45deg, #ab47bc, #8e24aa);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(-45deg, #ab47bc, #8e24aa);
+    }
+
+    #mobile-title{
+      display: block;
+    }
+  }
 </style>
 
 <div class="navbar navbar-default navbar-static-top">
   <div>
     <div class="navbar-header">
-      <button class="navbar-toggle" type="button" ng-click="$ctrl.isCollapsed = !$ctrl.isCollapsed">
+      <a href="/" class="navbar-brand">
+        <div id="mobile-title">Shaastra Research Conference</div>
+      </a>
+      <button class="navbar-toggle" type="button" ng-click="$ctrl.isCollapsed = !$ctrl.isCollapsed" style="background: #8e24aa;" >
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -37,42 +65,45 @@
         <li ui-sref-active="active">
           <a href="/"><span class="glyphicon glyphicon-home" style="color: white;"></span></a>
         </li>
-        <li ui-sref-active="active">
+        <li ui-sref-active="active" ng-click="$ctrl.isCollapsed = !$ctrl.isCollapsed">
           <a href="/#main-about">ABOUT</a>
         </li>
         <li ui-sref-active="active">
-          <a href="/#main-topics">TOPICS</a>
+          <a href="/#main-topics" ng-click="$ctrl.isCollapsed = !$ctrl.isCollapsed">TOPICS</a>
         </li>
         <li ui-sref-active="active">
-          <a href="/#main-iis">INDUSTRY CONNECT</a>
+          <a href="/#main-iis" ng-click="$ctrl.isCollapsed = !$ctrl.isCollapsed">INDUSTRY CONNECT</a>
         </li>
         <!-- <li ui-sref-active="active">
           <a href="#about">SPEAKERS</a>
         </li> -->
-        <li ui-sref-active="active">
+        <li ui-sref-active="active" ng-click="$ctrl.isCollapsed = !$ctrl.isCollapsed">
           <a href="/#main-committee">COMMITTEE</a>
         </li>
-        <li ui-sref-active="active">
+        <li ui-sref-active="active" ng-click="$ctrl.isCollapsed = !$ctrl.isCollapsed">
           <a href="/#main-timeline">TIMELINE</a>
         </li>
-        <li ui-sref-active="active">
+        <li ui-sref-active="active" ng-click="$ctrl.isCollapsed = !$ctrl.isCollapsed">
           <a href="/#main-downloads">DOWNLOADS</a>
         </li>
         <!-- <li ui-sref-active="active">
           <a href="#about">SPONSORS</a>
         </li> -->
-        <li ui-sref-active="active">
+        <li ui-sref-active="active" ng-click="$ctrl.isCollapsed = !$ctrl.isCollapsed">
           <a href="/#main-contact">CONTACT</a>
         </li>
-        <li ng-show="$ctrl.isAdmin()" ui-sref-active="active"><a href="/admin">Admin</a></li>
+
+        <li ui-sref-active="active" ng-show="$ctrl.isAdmin()" ng-click="$ctrl.isCollapsed = !$ctrl.isCollapsed">
+          <a href="/admin">ADMIN</a>
+        </li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li ng-show="!$ctrl.isLoggedIn()"><a href="/signup">SIGNUP</a></li>
-        <li ng-show="!$ctrl.isLoggedIn()"><a href="/login">LOGIN</a></li>
-        <li ng-show="$ctrl.isLoggedIn()" ui-sref-active="active"><a href="/report">SUBMISSION</a></li>
-        <li ng-show="$ctrl.isLoggedIn()" ui-sref-active="active"><a href="settings"><span class="glyphicon glyphicon-cog"></span></a></li>
-        <li ng-show="$ctrl.isLoggedIn()"><a href="logout">LOGOUT</a></li>
+        <li ng-show="!$ctrl.isLoggedIn()" ng-click="$ctrl.isCollapsed = !$ctrl.isCollapsed"><a href="/signup">SIGNUP</a></li>
+        <li ng-show="!$ctrl.isLoggedIn()" ng-click="$ctrl.isCollapsed = !$ctrl.isCollapsed"><a href="/login">LOGIN</a></li>
+        <li ng-show="$ctrl.isLoggedIn()" ui-sref-active="active" ng-click="$ctrl.isCollapsed = !$ctrl.isCollapsed"><a href="/report">SUBMISSION</a></li>
+        <li ng-show="$ctrl.isLoggedIn()" ui-sref-active="active" ng-click="$ctrl.isCollapsed = !$ctrl.isCollapsed"><a href="settings"><span class="glyphicon glyphicon-cog"></span></a></li>
+        <li ng-show="$ctrl.isLoggedIn()" ng-click="$ctrl.isCollapsed = !$ctrl.isCollapsed"><a href="logout">LOGOUT</a></li>
       </ul>
     </div>
   </div>

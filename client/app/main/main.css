@@ -148,4 +148,22 @@ td{
 	.shaastra-logo, .iitm-logo{
 		display: none;
 	}
+
+	.src-logo{
+		height: 10vh;
+		position: absolute;
+		left: 40vw;
+	}
+
+	.main-date, .main-place{
+		width: 100vw;
+	}
+
+	.main-register{
+		width: 60vw;
+	}
+
+	.main-table{
+		width: 100vw;
+	}
 }
