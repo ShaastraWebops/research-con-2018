@@ -12,23 +12,23 @@ export default class SignupController {
     city: '',
     state: '',
     phoneNumber: '',
-    srcID: ''
   };
   errors = {};
   submitted = false;
 
 
   /*@ngInject*/
-  constructor(Auth, $state) {
+  constructor(Auth, $state, $http) {
     this.Auth = Auth;
     this.$state = $state;
+    this.$http = $http;
   }
 
   register(form) {
     this.submitted = true;
 
     if(form.$valid) {
-      return this.Auth.createUser({
+      this.$http.post('/api/users', {
         name: this.user.name,
         email: this.user.email,
         password: this.user.password,
@@ -36,8 +36,7 @@ export default class SignupController {
         organisation: this.user.organisation,
         city: this.user.city,
         state: this.user.state,
-        phoneNumber: this.user.phoneNumber,
-        srcID: this.user.srcID
+        phoneNumber: this.user.phoneNumber
       })
         .then(() => {
           // Account created, redirect to home
