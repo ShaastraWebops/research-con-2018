@@ -20,6 +20,29 @@ var UserSchema = new Schema({
     type: String,
     required: true
   },
+  position: {
+    type: Boolean,
+    default: true
+  },
+  organisation: {
+    type: String,
+    default: 'Not Provided'
+  },
+  city: {
+    type: String,
+    default: 'Not Provided'
+  },
+  state: {
+    type: String,
+    default: 'Not Provided'
+  },
+  phoneNumber: {
+    type: Number
+  },
+  srcID: {
+    type: String,
+    default: 'Not Provided'
+  },
   file: {
     type: String
   },

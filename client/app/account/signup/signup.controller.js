@@ -6,7 +6,13 @@ export default class SignupController {
   user = {
     name: '',
     email: '',
-    password: ''
+    password: '',
+    position: 'true',
+    organisation: '',
+    city: '',
+    state: '',
+    phoneNumber: '',
+    srcID: ''
   };
   errors = {};
   submitted = false;
@@ -25,7 +31,13 @@ export default class SignupController {
       return this.Auth.createUser({
         name: this.user.name,
         email: this.user.email,
-        password: this.user.password
+        password: this.user.password,
+        position: this.user.position,
+        organisation: this.user.organisation,
+        city: this.user.city,
+        state: this.user.state,
+        phoneNumber: this.user.phoneNumber,
+        srcID: this.user.srcID
       })
         .then(() => {
           // Account created, redirect to home
