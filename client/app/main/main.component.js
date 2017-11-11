@@ -14,12 +14,13 @@ export class MainController {
                       Prof. Indumathi M. Nambi, Civil Engineering, IIT Madras\
                       Prof. Lelitha Devi Vanajakshi, Civil Engineering, IIT Madras\
                       Prof. K. P. Sudheer, Civil Engineering, IIT Madras\
-                      Prof. Palani Ramu, Engineering Design, IIT Madras\
+                      Prof. Palaniappan Ramu, Engineering Design, IIT Madras\
                       Prof. Saravana Kumar G, Engineering Design, IIT Madras\
                       Prof. Ganapathy Krishnamurthi, Engineering Design, IIT Madras\
                       Prof Harishankar Ramachandran, Electrical Engineering, IIT Madras\
                       Prof. Boby George, Electrical Engineering, IIT Madras\
                       Prof. Mohanasankar Sivaprakasam, Electrical Engineering, IIT Madras\
+                      Prof. R. K. Amit, Management Studies, IIT Madras\
                       Prof. S. Sundar, Mathematics, IIT Madras\
                       Prof. C. Balaji, Mechanical Engineering, IIT Madras\
                       Prof. K. Srinivasa Reddy, Mechanical Engineering, IIT Madras';
