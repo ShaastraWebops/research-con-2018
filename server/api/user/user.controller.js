@@ -57,7 +57,8 @@ export function create(req, res) {
   newUser.provider = 'local';
   newUser.role = 'user';
   
-  var len = User.find().length;
+  User.count({}, function (err, len) {
+  
   if(len < 10)
     newUser.srcID = 'SRC000'+(len+1);
   else if(len < 100)
@@ -67,6 +68,7 @@ export function create(req, res) {
   else if(len < 10000)
     newUser.srcID = 'SRC'+(len+1);
 
+
   newUser.save()
     .then(function(user) {
       var token = jwt.sign({ _id: user._id }, config.secrets.session, {
@@ -75,6 +77,9 @@ export function create(req, res) {
       res.json({ token });
     })
     .catch(validationError(res));
+  });
+
+
 }
 
 /**
