@@ -5,17 +5,23 @@ import routing from './admin.routes';
 
 export class AdminController {
   /*@ngInject*/
-  constructor($http, $stateParams) {
+  constructor($http, $stateParams, FileSaver) {
     // Use the User $resource to fetch all users
     this.$http = $http;
     this.$stateParams = $stateParams;
     this.fileName = "";
+    this.FileSaver = FileSaver;
 
-    this.getFile = function(){
-    	var id = this.$stateParams.id;
-    	this.$http.get('/api/users/'+id).then(res => {
-    		this.fileName =  'http://shaastra.org:8004/assets/uploads/'+res.file;
-    	});
+    this.pos = function(b)
+    {
+      return b?'Academia':'Industry';
+    }
+
+    this.download = function(name) {
+      this.$http.get('/api/users/showfile/'+ name,{ responseType: "arraybuffer"  }).then(response => {
+        var blob = new Blob([response.data], { type: "application/pdf"});
+        this.FileSaver.saveAs(blob, name);
+      });
     }
   }
 
@@ -24,7 +30,7 @@ export class AdminController {
   	this.$http.get('/api/users').then(res => {
   		this.users = res.data;
   		console.log(res.data);
-  		this.users.sort(function(a, b){return a.srcID < b.srcID;});
+  		this.users.sort(function(a, b){return a.srcID > b.srcID;});
   	});
   }
 

@@ -1,7 +1,7 @@
 'use strict';
 
 import angular from 'angular';
-// import ngAnimate from 'angular-animate';
+import ngFileSaver from 'angular-file-saver';
 import ngCookies from 'angular-cookies';
 import ngResource from 'angular-resource';
 import ngSanitize from 'angular-sanitize';
@@ -28,7 +28,7 @@ import util from '../components/util/util.module';
 
 import './app.css';
 
-angular.module('researchConApp', [ngCookies, ngResource, ReportComponent, ngSanitize, uiRouter, uiBootstrap, _Auth,
+angular.module('researchConApp', [ngCookies, ngFileSaver, ngResource, ReportComponent, ngSanitize, uiRouter, uiBootstrap, _Auth,
   account, admin, navbar, footer, main, constants, util
 ])
   .config(routeConfig)

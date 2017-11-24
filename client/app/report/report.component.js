@@ -11,12 +11,13 @@ export class ReportComponent {
     this.$http = $http;
     this.$scope = $scope;
     this.$scope.fileshow = false;
+    this.myID = '';
     this.getfile();
-
   }
 
   getfile() {
     this.$http.get('/api/users/me').then(res => {
+      this.myID = res.data.srcID;
       if(res.data.file != null){
       this.$scope.url = '/api/users/showfile/' + res.data.file;
       this.$scope.fileshow = true;

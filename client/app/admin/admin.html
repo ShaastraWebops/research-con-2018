@@ -31,9 +31,12 @@
       <td style="width: 15%;">{{user.srcID}}</td>
       <td style="width: 20%;">{{user.name}}</td>
       <td style="width: 20%;">{{user.email}}<br>{{user.phoneNumber}}</td>
-      <td style="width: 20%;">{{user.position}}<br>{{user.organisation}}</td>
+      <td style="width: 20%;">{{admin.pos(user.position)}}<br>{{user.organisation}}</td>
       <td style="width: 15%;">{{user.city}}<br>{{user.state}}</td>
-      <td style="width: 10%;"></td>
+      <td style="width: 10%;">
+        <button class="btn btn-success" ng-click="admin.download(user.file)" ng-hide="user.file===undefined">View</button>
+        <p ng-show="user.file===undefined">Not submitted</p>
+      </td>
     </tr>
   </table>
 </div>
