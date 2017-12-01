@@ -29,6 +29,7 @@
     "express-session": "^1.15.6",
     "fast-json-patch": "^1.0.0",
     "font-awesome": "^4.7.0",
+    "json2csv": "^3.11.5",
     "jsonwebtoken": "^7.4.3",
     "lodash": "^4.17.4",
     "lusca": "^1.5.2",

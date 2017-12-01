@@ -17,6 +17,13 @@ export class AdminController {
       return b?'Academia':'Industry';
     }
 
+    this.export = function(){
+      this.$http.get('/api/users/export').then(response => {
+       var data = new Blob([response.data], { type: 'text/csv;charset=utf-8' });
+       this.FileSaver.saveAs(data, 'participants.csv');
+     });
+    }
+
     this.download = function(name) {
       this.$http.get('/api/users/showfile/'+ name,{ responseType: "arraybuffer"  }).then(response => {
         var blob = new Blob([response.data], { type: "application/pdf"});
@@ -29,8 +36,7 @@ export class AdminController {
   {
   	this.$http.get('/api/users').then(res => {
   		this.users = res.data;
-  		console.log(res.data);
-  		this.users.sort(function(a, b){return a.srcID > b.srcID;});
+  		this.users = this.users.sort(function(a, b){return a.srcID > b.srcID;});
   	});
   }
 
