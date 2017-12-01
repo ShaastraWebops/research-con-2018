@@ -28,10 +28,10 @@ export class ReportComponent {
   upload() {
        var formData = new FormData;
        var file = $('#file')[0].files[0];
-       if(file.name.split('.').pop() !== "pdf")
+ //      if(file.name.split('.').pop() !== "pdf")
         {
-          this.error = "Only pdf files allowed";
-          return;
+   //       this.error = "Only pdf files allowed";
+     //     return;
         }
        formData.append('uploadedFile', file);
        this.$http.post('/api/users/uploadfile', formData, {

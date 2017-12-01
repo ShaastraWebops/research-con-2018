@@ -9,9 +9,10 @@ import path from 'path';
 var saveWithName = "Noname";
 var storage = multer.diskStorage({
   destination: function(req, file, cb) {
-    cb(null, 'client/assets/reports')
+    cb(null, './reports')
   },
   filename: function(req, file, cb) {
+    console.log(file);
     saveWithName = file.fieldname + '-' + Date.now() + "." + file.originalname.split('.').pop();
     cb(null, saveWithName)
   }
@@ -46,7 +47,7 @@ export function index(req, res) {
 }
 
 export function showfile(req,res) {
-   res.sendFile(path.resolve('client/assets/reports/' + req.params.name));
+   res.sendFile(path.resolve('./reports/' + req.params.name));
 }
 
 /**
@@ -108,6 +109,7 @@ export function fileupload(req,res) {
     }
     User.findOne({_id: user},function(err,user){
       if(err) throw err;
+	console.log(saveWithName);
       user.file = saveWithName;
       user.save(function(err){
         if(err) throw err;
