@@ -1,12 +1,6 @@
 <style type="text/css">
-  .admin{
-    width: 90vw;
-    margin-left: 5vw;
-  }
 
   .admin tr{
-    //display: flex;
-    //flex-direction: row;
   }
 
   .admin tr td{
@@ -17,7 +11,8 @@
     border-collapse: collapse;
   }
 </style>
-<div style="margin-top: 100px;">
+<div style="margin-top: 100px;" class="container">
+  <button class="btn btn-success" ng-click="admin.export()">Download as .csv</button>
   <table class="admin">
     <tr>
       <td style="width: 15%;">SRC ID</td>

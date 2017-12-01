@@ -3,6 +3,7 @@
 import User from './user.model';
 import config from '../../config/environment';
 import jwt from 'jsonwebtoken';
+import json2csv from 'json2csv';
 import multer from 'multer';
 import path from 'path';
 
@@ -80,6 +81,21 @@ export function create(req, res) {
   });
 
 
+}
+
+export function exp(req, res) {
+  return User.find({'role': 'user'}).exec()
+    .then(participants => {
+      participants = participants.sort(function(a, b){return a.srcID > b.srcID});
+      var fields = [{
+        value: 'srcID',
+        label: 'SRC ID'}, 'name', 'position','organisation', 'email', 'phoneNumber', 'city', 'state'];
+      var csv = json2csv({ data: participants, fields: fields});
+      res.setHeader('Content-disposition', 'attachment; filename=participants.csv');
+      res.set('Content-Type', 'text/csv');
+      res.status(200).send(csv);
+    })
+    .catch(handleError(res));
 }
 
 /**
